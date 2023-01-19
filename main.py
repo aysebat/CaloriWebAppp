@@ -19,4 +19,19 @@ class CaloriesFormPage(MethodView):
         return render_template('calories_form_page.html',
                                caloriesform = calories_form)
     def post(self):
-        pass
+       pass
+
+
+class CaloriesForm(Form):
+    weight = StringField("Weight", default=68)
+    height = StringField("Height", default=175)
+    age = StringField("Age", default=35)
+    country = StringField("Country", default="Turkey")
+    city = StringField("City", default="Istanbul")
+    button = SubmitField("Calculator")
+
+app.add_url_rule('/',
+                 view_func=HomePage.as_view("home+page"))
+app.add_url_rule('/calories_form',
+                 view_func=CaloriesFormPage.as_view('calories_form_page'))
+app.run(debug=True)
