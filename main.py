@@ -37,8 +37,8 @@ class CaloriesFormPage(MethodView):
                                result=True)
 
 class CaloriesForm(Form):
-    weight = StringField("Weight", default=68)
-    height = StringField("Height", default=175)
+    weight = StringField("Weight (kg)", default=68)
+    height = StringField("Height (cm)", default=175)
     age = StringField("Age", default=35)
     country = StringField("Country", default="Turkey")
     city = StringField("City", default="Istanbul")
