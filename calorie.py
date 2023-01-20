@@ -14,7 +14,21 @@ class Calorie:
         return result
 
 
+
+    def BMI_result(self):
+        height_m = self.height / 100.0
+        bmi = round(self.weight / (height_m * height_m),2)
+        if bmi < 18.5:
+            return f"Your BMI: {bmi}, Underweight"
+        if 18.5 < bmi< 24.9:
+            return f"Your BMI: {bmi}, Healthy Weight"
+        if 25.0 < bmi < 29.9:
+            return f"Your BMI: {bmi}, Overweight"
+        else:
+            return f"Your BMI: {bmi}, Obesity"
+
 if __name__ == "__main__":
     temperature = Temperature(country="italy", city="rome").get()
     calorie = Calorie(weight=70, height=175, age=32, temperature=temperature)
     print(calorie.calculate())
+    print(calorie.BMI_result())

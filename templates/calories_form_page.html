@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="static/main.css">
 </head>
 <body>
-<h2>Calories Calculation Form</h2>
+<div class="container">
+<h2 class="container--header">Calories Calculation Form</h2>
 <p>Fill in the form and click the button to know how many calories you need!</p>
 <form action="/calories_form" method="post">
     <p>Let's get some info about you first.</p>
@@ -26,10 +27,16 @@
     <br>
     {{caloriesform.button}}
     <br>
-    {% if result==True %}
+    <div class="resultBMI">
+        {% if result==True %}
     <h3>{{bmiResult}}</h3>
     <h3>You need {{calories}} calories (kcal) today</h3>
     {% endif %}
+    </div>
+
 </form>
+
+</div>
+
 </body>
 </html>
