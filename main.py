@@ -19,7 +19,10 @@ class CaloriesFormPage(MethodView):
         return render_template('calories_form_page.html',
                                caloriesform = calories_form)
     def post(self):
-       pass
+       calories_form = CaloriesForm(request.form)
+
+        temperature = temperature(country=calories_form.country.data,
+                                  city=calories_form.city.data).get()
 
 
 class CaloriesForm(Form):
