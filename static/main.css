@@ -53,10 +53,6 @@ body {
 
 .home {
   height: 100vh;
-
-
-  background-size: cover;
-  background-position: top;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,6 +72,19 @@ body {
         letter-spacing: 1.2rem;
         font-size: 4rem; } }}
 
+.heading-primary {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 8rem;
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: 2.0rem;
+  animation: moveInLeft 1s ease-out;
+  @media (max-width: 37.5em) {
+      .heading-primary{
+        letter-spacing: 1.2rem;
+        font-size: 4rem; } }}
 
 .heading-sub {
   color: #EAFAF1;
@@ -84,6 +93,7 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   animation: moveInRight 1s ease-out;}
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -135,24 +145,18 @@ body {
 
 .resultBMI {
 margin: 20px 0;
-color: #F0F4F1;
-}
-
-
+color: #F0F4F1;}
 
 input[type=text] {
     width: 100%;
     padding: 8px 8px;
-    margin: 10px 0;
-}
+    margin: 10px 0;}
 
 input[type=submit]{
     width: 100%;
-    background-color: #fff;
-    color: #777;
+    background-color: #A7425C;
+    color: #fff;
     padding: 12px 12px;
     border: none;
-    border-radius: 6px;
-
-}
+    border-radius: 6px;}
 
