@@ -126,6 +126,7 @@ body {
 .container{
   color: #F0F4F1;
   font-size: 3rem;
+  font-family: 'Uchen', serif;
   max-width: 120rem;
   height: 100vh;
   margin: 5rem 5rem;
@@ -153,19 +154,34 @@ body {
 
 
 .resultBMI {
-margin: 20px 0;
-color: #F0F4F1;}
+    margin: 20px 0;
+    color: #F0F4F1;}
 
 input[type=text] {
     width: 100%;
     padding: 8px 8px;
     margin: 10px 0;}
 
+input[type=text]:focus {
+    outline: none;
+    border-color: #A7425C;}
+
 input[type=submit]{
     width: 100%;
+    font-family: 'Uchen', serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.1rem;
     background-color: #A7425C;
     color: #fff;
     padding: 12px 12px;
     border: none;
     border-radius: 6px;}
 
+
+
+.margin_bottom {
+margin-bottom: 2rem;}
+
+.margin_top {
+margin-top: 2rem;}
